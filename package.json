@@ -1,0 +1,25 @@
+{
+  "name": "hello-cli",
+  "version": "0.0.1",
+  "description": "a node cli",
+  "main": "index.js",
+  "keywords": [
+    "hello"
+  ],
+  "author": "toshihirock",
+  "license": "ISC",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "bin": {
+    "cli": "./bin/cli"
+  },
+  "dependencies": {
+    "commander": "^2.2.0",
+    "colors": "^0.6.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2"
+  }
+}
