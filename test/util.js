@@ -1,9 +1,10 @@
-var assert, util;
+var assert, util, sinon;
 assert = require("assert");
 util  = require("../lib/util");
+sinon = require("sinon");
 
 describe("util", function() {
-  describe("sum", function() {
+  describe("sum関数のテスト", function() {
     it("1 + 1 = 2", function() {
       assert(util.sum(1,1), 2);
     });
