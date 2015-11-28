@@ -1,16 +1,22 @@
 var assert, util, sinon;
 assert = require("assert");
-util  = require("../lib/util");
+Util  = require("../lib/util");
 sinon = require("sinon");
 
 describe("util", function() {
   describe("sum関数のテスト", function() {
-    it("1 + 1 = 2", function() {
-      assert(util.sum(1,1), 2);
+    var util,
+        stub;
+
+    before(function() {
+      util = new Util();
+      stub = sinon.stub(util, 'add');
+      stub.returns(3);
     });
 
-    it("0 + 1 = 1", function() {
-      assert(util.sum(0,1), 1);
+    it("1 + 1 = 2", function() {
+      assert.equal(util.sum(1,1), 3);
     });
+
   });
 });
